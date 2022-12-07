@@ -70,7 +70,7 @@ namespace практическая12.pages
                 listFilter = listFilter.Where(z => z.IsActual == true).ToList();
             }
 
-            switch(cmbSort.SelectedIndex)
+            switch(cmbSort.SelectedIndex) //сотрировка по возрастанию и убыванию
             {
                 case 1:
                     listFilter.Sort((x, y) => x.Price.CompareTo(y.Price));
@@ -79,9 +79,14 @@ namespace практическая12.pages
                     listFilter.Sort((x, y) => x.Price.CompareTo(y.Price));
                     listFilter.Reverse();
                     break;
-        }
+            }
 
             listTours.ItemsSource = listFilter;
+            double price = 0;
+            foreach(Tour tour in listFilter)
+            {
+                price += tour.Price * tour.TicketCount;
+            }
             if (listFilter.Count == 0)
             {
                 MessageBox.Show("нет записей");

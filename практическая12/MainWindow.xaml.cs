@@ -23,6 +23,10 @@ namespace практическая12
         public MainWindow()
         {
             InitializeComponent();
+            ClassFrame.mainFrame = frMain;
+            ClassBase.Base = new Entities();
+            ClassFrame.mainFrame.Navigate(new pages.PageTours());
+            
         }
     }
 }

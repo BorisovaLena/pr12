@@ -25,12 +25,5 @@ namespace практическая12
                 else { return Brushes.Red; }
             }
         }
-        public string PriceFormat
-        {
-            get
-            {
-                return string.Format("Цена: {0:C2}", Price);
-            }
-        }
     }
 }

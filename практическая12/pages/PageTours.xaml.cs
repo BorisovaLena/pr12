@@ -33,7 +33,8 @@ namespace практическая12.pages
                 cmbType.Items.Add(type[i].Name);
             }
             cmbType.SelectedIndex = 0;
-            cmbSort.SelectedIndex = 0; 
+            cmbSort.SelectedIndex = 0;
+            
         }
         void Filter()
         {
@@ -83,7 +84,7 @@ namespace практическая12.pages
 
             listTours.ItemsSource = listFilter;
             int price = 0;
-            foreach(Tour tour in listFilter)
+            foreach(Tour tour in listFilter) //подсчет общей стоимости туров
             {
                 price += (int)tour.Price * tour.TicketCount;
             }
@@ -107,6 +108,11 @@ namespace практическая12.pages
         private void cbActual_Checked(object sender, RoutedEventArgs e)
         {
             Filter();
+        }
+
+        private void btnPageHotels_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.mainFrame.Navigate(new PageHotels());
         }
     }
 }

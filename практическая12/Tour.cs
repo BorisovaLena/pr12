@@ -25,7 +25,7 @@ namespace практическая12
         public int TicketCount { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public byte[] ImagePreview { get; set; }
+        public string ImagePreview { get; set; }
         public decimal Price { get; set; }
         public bool IsActual { get; set; }
     

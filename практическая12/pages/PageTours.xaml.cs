@@ -82,11 +82,12 @@ namespace практическая12.pages
             }
 
             listTours.ItemsSource = listFilter;
-            double price = 0;
+            int price = 0;
             foreach(Tour tour in listFilter)
             {
-                price += tour.Price * tour.TicketCount;
+                price += (int)tour.Price * tour.TicketCount;
             }
+            tbTotalCostOfTours.Text = string.Format("Общая стоимость туров: {0:C2}", price);
             if (listFilter.Count == 0)
             {
                 MessageBox.Show("нет записей");

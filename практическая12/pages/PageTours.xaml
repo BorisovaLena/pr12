@@ -28,7 +28,7 @@
                 </ComboBox>
             </StackPanel>
             <StackPanel>
-                <TextBlock Name="tbTotalCostOfTours"/>
+                <TextBlock Name="tbTotalCostOfTours" HorizontalAlignment="Right"/>
             </StackPanel>
             <ListView Name="listTours" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="450">
                 <ListView.ItemsPanel>
@@ -42,7 +42,7 @@
                             <Grid Width="300" Height="250">
                                 <StackPanel>
                                     <TextBlock Text="{Binding Name}"/>
-                                    <!--<Image Width="100" Height="100" Source="{Binding ImagePreview, TargetNullValue={StaticResource }}"/>-->
+                                    <!--<Image Width="100" Height="100" Source="{Binding ImagePreview, TargetNullValue={StaticResource defaultImage}}"/>-->
                                     <TextBlock Text="{Binding PriceFormat}"/>
                                     <TextBlock Text="{Binding Actual}"/>
                                     <TextBlock Text="{Binding TicketCount, StringFormat=Билетов: {0}}"/>

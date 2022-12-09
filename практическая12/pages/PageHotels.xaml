@@ -50,7 +50,8 @@
         </StackPanel>
         <StackPanel Grid.Row="2">
             <Button Name="btnPageTours" Content="Туры" Click="btnPageTours_Click"/>
-            
+            <Button Name="btnAddHotel" Content="Добавить отель" Click="btnAddHotel_Click"/>
+
         </StackPanel>
     </Grid>
 </Page>

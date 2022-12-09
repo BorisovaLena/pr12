@@ -7,8 +7,8 @@
       <Diagram DiagramId="a3f4fc2d14b846ee93d405b3a3016272" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="hotels1Model.Country" Width="1.5" PointX="0.75" PointY="4.125" />
         <EntityTypeShape EntityType="hotels1Model.Hotel" Width="1.5" PointX="3" PointY="3.5" />
-        <EntityTypeShape EntityType="hotels1Model.HotelComment" Width="1.5" PointX="5.25" PointY="7.875" />
-        <EntityTypeShape EntityType="hotels1Model.HotelImage" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="hotels1Model.HotelComment" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="hotels1Model.HotelImage" Width="1.5" PointX="5.25" PointY="8.25" />
         <EntityTypeShape EntityType="hotels1Model.HotelOfTour" Width="1.5" PointX="8.25" PointY="3.875" />
         <EntityTypeShape EntityType="hotels1Model.Tour" Width="1.5" PointX="6" PointY="11.5" />
         <EntityTypeShape EntityType="hotels1Model.Type" Width="1.5" PointX="6" PointY="16" />

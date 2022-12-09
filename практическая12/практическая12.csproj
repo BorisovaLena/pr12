@@ -95,6 +95,9 @@
     <Compile Include="pages\PageTours.xaml.cs">
       <DependentUpon>PageTours.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pages\PageUpdateHotel.xaml.cs">
+      <DependentUpon>PageUpdateHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tour.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\PageTours.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\PageUpdateHotel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -89,7 +89,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelComment_Hotel">
-          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HotelComment" Type="Self.HotelComment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -101,7 +103,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelImage_Hotel">
-          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HotelImage" Type="Self.HotelImage" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -113,7 +117,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelOfTour_Hotel">
-          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HotelOfTour" Type="Self.HotelOfTour" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -338,7 +344,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelComment_Hotel">
-          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1" />
+          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="hotels1Model.HotelComment" Role="HotelComment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -350,7 +358,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelImage_Hotel">
-          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1" />
+          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="hotels1Model.HotelImage" Role="HotelImage" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -362,7 +372,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HotelOfTour_Hotel">
-          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1" />
+          <End Type="hotels1Model.Hotel" Role="Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="hotels1Model.HotelOfTour" Role="HotelOfTour" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -409,7 +421,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

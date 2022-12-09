@@ -34,7 +34,10 @@ namespace практическая12.pages
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-
+            Button btn = (Button)sender;
+            int index = Convert.ToInt32(btn.Uid);
+            Hotel hotel = ClassBase.Base.Hotel.FirstOrDefault(z => z.Id == index);
+            ClassFrame.mainFrame.Navigate(new PageUpdateHotel(hotel));
         }
 
         private void btnPageTours_Click(object sender, RoutedEventArgs e)
@@ -80,6 +83,11 @@ namespace практическая12.pages
             pc.Countlist = listHotel.Count;  // присваиваем новое значение свойству, которое в объекте отвечает за общее количество записей
             dgHotels.ItemsSource = listHotel.Skip(0).Take(pc.CountPage).ToList();  // отображаем первые записи в том количестве, которое равно CountPage
             pc.CurrentPage = 1; // текущая страница - это страница 1
+        }
+
+        private void btnAddHotel_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.mainFrame.Navigate(new PageUpdateHotel());
         }
     }
 }

@@ -28,7 +28,7 @@
                     <DataGridTemplateColumn Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Name="btnUpdate" Uid="{Binding Id}" Content="Редактировать" Click="btnUpdate_Click"/>
+                                <Button Name="btnUpdate" Uid="{Binding Id}" Content="Редактировать" Click="btnUpdate_Click" Template="{StaticResource CTButon3}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

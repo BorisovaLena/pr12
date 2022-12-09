@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -49,32 +50,43 @@ namespace практическая12.pages
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (add==true)
+            if(tbName.Text == "" || tbCountOfStars.Text== "" || tbDescription.Text== "" || cmbCountry.SelectedIndex==-1)
             {
-                hotel = new Hotel();
-            }
-            hotel.Name = tbName.Text;
-            if(Convert.ToInt32(tbCountOfStars.Text)>-1 && Convert.ToInt32(tbCountOfStars.Text)<6)
-            {
-
-            }
-            hotel.CountOfStars = Convert.ToInt32(tbCountOfStars.Text);
-            hotel.CountryCode = Convert.ToString(cmbCountry.SelectedValue);
-            hotel.Description = tbDescription.Text;
-            if (add == true)
-            {
-                ClassBase.Base.Hotel.Add(hotel);
-            }
-            ClassBase.Base.SaveChanges();
-            if (add == true)
-            {
-                MessageBox.Show("Успешное добавление записи!!!");
+                if (add == true)
+                {
+                    hotel = new Hotel();
+                }
+                hotel.Name = tbName.Text;
+                Regex r1 = new Regex("^[0-5]{1}$");
+                if (r1.IsMatch(tbCountOfStars.Text)==true)
+                {
+                    hotel.CountOfStars = Convert.ToInt32(tbCountOfStars.Text);
+                    hotel.CountryCode = Convert.ToString(cmbCountry.SelectedValue);
+                    hotel.Description = tbDescription.Text;
+                    if (add == true)
+                    {
+                        ClassBase.Base.Hotel.Add(hotel);
+                    }
+                    ClassBase.Base.SaveChanges();
+                    if (add == true)
+                    {
+                        MessageBox.Show("Успешное добавление записи!!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Успешное изменение записи!!!");
+                    }
+                    ClassFrame.mainFrame.Navigate(new PageHotels());
+                }
+                else
+                {
+                    MessageBox.Show("Количество звезд лежит в диапазоне от 0 до 5");
+                }
             }
             else
             {
-                MessageBox.Show("Успешное изменение записи!!!");
+                MessageBox.Show("Заполните все поля!!!");
             }
-            ClassFrame.mainFrame.Navigate(new PageHotels());
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

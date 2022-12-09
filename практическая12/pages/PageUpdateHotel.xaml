@@ -18,7 +18,7 @@
                     <TextBox Name="tbName"/>
                 </GroupBox>
                 <GroupBox Header="Кол-во звезд">
-                    <TextBox Name="tbCountOfStars"/>
+                    <TextBox Name="tbCountOfStars" MaxLength="1"/>
                 </GroupBox>
                 <ComboBox Name="cmbCountry" />
                 <GroupBox Header="Описание">

@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:практическая12.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageUpdateHotel">
+      Title="PageUpdateHotel"
+      Background="#bae3e8">
 
     <Grid>
         <StackPanel>
@@ -24,9 +25,9 @@
                 <GroupBox Header="Описание">
                     <TextBox Name="tbDescription" Height="150"/>
                 </GroupBox>
-            </StackPanel>
-            <Button Name="btnSave" Content="Сохранить" Width="368" Click="btnSave_Click"/>
-            <Button Name="btnBack" Content="Назад" Width="368" Click="btnBack_Click"/>
+            </StackPanel >
+            <Button Name="btnSave" Content="Сохранить" Width="368" Click="btnSave_Click" Template="{StaticResource CTButon2}"/>
+            <Button Name="btnBack" Content="Назад" Width="368" Click="btnBack_Click" Template="{StaticResource CTButon2}"/>
         </StackPanel>
         
     </Grid>

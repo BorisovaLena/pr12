@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:практическая12.pages"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="1200"
-      Title="PageHotels">
+      Title="PageHotels"
+      Background="#bae3e8">
 
     <Grid>
         <Grid.RowDefinitions>

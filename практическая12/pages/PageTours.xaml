@@ -8,6 +8,11 @@
       d:DesignHeight="900" d:DesignWidth="1200"
       Title="PageTours">
 
+    <Page.Resources>
+        <BitmapImage x:Key="NoPhoto" UriSource="\pictures\picture.png"/>
+    </Page.Resources>
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
@@ -47,7 +52,7 @@
                             <Grid Width="350" Height="250">
                                 <StackPanel>
                                     <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="18"/>
-                                    <Image Width="180" Height="180" Source="{Binding ImagePreview}"/>
+                                    <Image Width="180" Height="180" Source="{Binding ImagePreview, TargetNullValue={StaticResource NoPhoto}}"/>
                                     <TextBlock Text="{Binding Price, StringFormat={}{0:F3} РУБ}" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
                                     <DockPanel>
                                         <TextBlock Text="{Binding Actual}" Foreground="{Binding ActualColor}" HorizontalAlignment="Left"/>

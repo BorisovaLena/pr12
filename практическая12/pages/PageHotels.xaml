@@ -18,7 +18,7 @@
             <StackPanel>
                 <TextBlock Text="Отели" Style="{StaticResource TBlockZag}"/>
             </StackPanel>
-            <DataGrid Name="dgHotels" AutoGenerateColumns="False" CanUserAddRows="False" FontSize="16">
+            <DataGrid Name="dgHotels" AutoGenerateColumns="False" CanUserAddRows="False" FontSize="16" FontFamily="Comic Sans MS">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Name}"/>
                     <DataGridTextColumn Header="Кол-во звезд" Width="*" Binding="{Binding CountOfStars}"/>
@@ -51,7 +51,7 @@
         <StackPanel Grid.Row="2">
             <Button Name="btnPageTours" Content="Туры" Click="btnPageTours_Click"/>
             <Button Name="btnAddHotel" Content="Добавить отель" Click="btnAddHotel_Click"/>
-
+            <Button Name="btnDeleteHotel" Content="Удалить отель" Click="btnDeleteHotel_Click"/>
         </StackPanel>
     </Grid>
 </Page>

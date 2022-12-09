@@ -78,7 +78,7 @@ namespace практическая12.pages
             }
             catch
             {
-                pc.CountPage = listHotel.Count; // если в текстовом поле значения нет, присваиваем свойству объекта, которое хранит количество записей на странице количество элементов в списке
+                pc.CountPage = 10; // если в текстовом поле значения нет, присваиваем свойству объекта, которое хранит количество записей на странице количество элементов в списке
             }
             pc.Countlist = listHotel.Count;  // присваиваем новое значение свойству, которое в объекте отвечает за общее количество записей
             dgHotels.ItemsSource = listHotel.Skip(0).Take(pc.CountPage).ToList();  // отображаем первые записи в том количестве, которое равно CountPage
@@ -88,6 +88,38 @@ namespace практическая12.pages
         private void btnAddHotel_Click(object sender, RoutedEventArgs e)
         {
             ClassFrame.mainFrame.Navigate(new PageUpdateHotel());
+        }
+
+        private void btnDeleteHotel_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgHotels.SelectedItems.Count != 0)
+            {
+                foreach (Hotel hotel in dgHotels.SelectedItems)
+                {
+                    List<HotelOfTour> hot = ClassBase.Base.HotelOfTour.Where(z => z.HotelId == hotel.Id).ToList();
+                    foreach(HotelOfTour h in hot)
+                    {
+                        if (h.Tour.IsActual == false)
+                        {
+                            if(MessageBox.Show("Вы хотите удалить {0}", Name, MessageBoxButton.YesNo)==MessageBoxResult.Yes)
+                            {
+                                ClassBase.Base.Hotel.Remove(hotel);
+                                ClassBase.Base.SaveChanges();
+                                MessageBox.Show("Успешное удаление!!!");
+                                ClassFrame.mainFrame.Navigate(new PageHotels());
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Данный отель не может быть удален!!!");
+                        }
+                    } 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите отель для удаления!!!");
+            }
         }
     }
 }

@@ -50,7 +50,7 @@ namespace практическая12.pages
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if(tbName.Text == "" || tbCountOfStars.Text== "" || tbDescription.Text== "" || cmbCountry.SelectedIndex==-1)
+            if(tbName.Text != "" && tbCountOfStars.Text != "" && tbDescription.Text != "" && cmbCountry.SelectedIndex!=-1)
             {
                 if (add == true)
                 {

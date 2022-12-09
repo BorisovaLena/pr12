@@ -29,6 +29,17 @@
             <Setter Property="Margin" Value="0,5"/>
         </Style>
 
+        <ControlTemplate x:Key="CTButon" TargetType="Button">
+            <Border BorderBrush="Black" BorderThickness="1" Background="#fac716"  Width="400" Height="30" Margin="5">
+                <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            </Border>
+        </ControlTemplate>
         
+        <ControlTemplate x:Key="CTButon2" TargetType="Button">
+            <Border BorderBrush="Black" BorderThickness="1" Background="#fac716"  Width="300" Height="30" Margin="5">
+                <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            </Border>
+        </ControlTemplate>
+
     </Application.Resources>
 </Application>

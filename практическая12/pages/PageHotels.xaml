@@ -48,10 +48,10 @@
             <TextBlock Name="txtNext" Uid="next" Text=" &gt;" MouseDown="GoPage_MouseDown"/>
             <TextBlock Name="txtLastPage" Uid="lastPage" Text=" &gt;&gt;" MouseDown="GoPage_MouseDown"/>
         </StackPanel>
-        <StackPanel Grid.Row="2">
-            <Button Name="btnPageTours" Content="Туры" Click="btnPageTours_Click"/>
-            <Button Name="btnAddHotel" Content="Добавить отель" Click="btnAddHotel_Click"/>
-            <Button Name="btnDeleteHotel" Content="Удалить отель" Click="btnDeleteHotel_Click"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="btnPageTours" Content="Туры" Click="btnPageTours_Click" Template="{StaticResource CTButon2}"/>
+            <Button Name="btnAddHotel" Content="Добавить отель" Click="btnAddHotel_Click" Template="{StaticResource CTButon2}"/>
+            <Button Name="btnDeleteHotel" Content="Удалить отель" Click="btnDeleteHotel_Click" Template="{StaticResource CTButon2}"/>
         </StackPanel>
     </Grid>
 </Page>
